@@ -1,6 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { Input, Form } from '@rocketseat/unform';
+
+// actions
+import { signInRequest } from '~/store/modules/auth/actions';
 
 import logo from '~/assets/logo.png';
 
@@ -16,8 +20,9 @@ const schema = Yup.object().shape({
 });
 
 export default function SignIn() {
+  const dispatch = useDispatch();
   function handleSubmit({ email, password }) {
-    console.tron.log(email, password);
+    dispatch(signInRequest(email, password));
   }
   return (
     <>
