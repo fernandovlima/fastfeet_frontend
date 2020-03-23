@@ -1,7 +1,4 @@
-import React from 'react';
+import DeliverymanList from './List';
+import DeliverymanForm from './Form';
 
-// import { Container } from './styles';
-
-export default function Deliverymans() {
-  return <div />;
-}
+export { DeliverymanForm, DeliverymanList };

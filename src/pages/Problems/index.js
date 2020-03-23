@@ -1,7 +1,3 @@
-import React from 'react';
+import ProblemsList from './List';
 
-// import { Container } from './styles';
-
-export default function Problems() {
-  return <div />;
-}
+export { ProblemsList };

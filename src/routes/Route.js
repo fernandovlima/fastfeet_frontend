@@ -2,30 +2,24 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-// ayuots
-import AuthLayout from '~/pages/_layouts/auth';
-import DefaultLayout from '~/pages/_layouts/default';
+import AuthLayout from '~/layouts/auth';
+import DefaultLayout from '~/layouts/default';
 
-import { store } from '~/store/';
+import { store } from '~/store';
 
 export default function RouteWrapper({
   component: Component,
   isPrivate,
   ...rest
 }) {
-  const { signed } = store.getState().auth;
+  const { singed } = store.getState().auth;
 
-  // se nao logado e rota privada redireciona para o login
-  if (!signed && isPrivate) {
-    return <Redirect to="/" />;
-  }
-  // se logado e rota nao privada redireciona para dashboard
-  if (signed && !isPrivate) {
-    return <Redirect to="/deliveries" />;
-  }
+  if (!singed && isPrivate) return <Redirect to="/" />;
 
-  const Layout = signed ? DefaultLayout : AuthLayout;
-  // se tiver logado
+  if (singed && !isPrivate) return <Redirect to="/deliveries" />;
+
+  const Layout = singed ? DefaultLayout : AuthLayout;
+
   return (
     <Route
       {...rest}

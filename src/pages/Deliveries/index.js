@@ -1,9 +1,4 @@
-import React from 'react';
-import api from '~/services/api';
+import DeliveryList from './List';
+import DeliveryForm from './Form';
 
-// import { Container } from './styles';
-
-export default function Deliveries() {
-  api.get('recipients');
-  return <h1>Deliveries</h1>;
-}
+export { DeliveryList, DeliveryForm };
