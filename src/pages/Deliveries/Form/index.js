@@ -21,7 +21,7 @@ export default function DeliveryForm({ match }) {
   const { id } = match.params;
 
   return (
-    <Form entity="deliveries" schema={schema} id={id}>
+    <Form entity="packages" schema={schema} id={id}>
       <div className="flex">
         <Field>
           <ReactSelect

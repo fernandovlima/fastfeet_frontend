@@ -1,5 +1,5 @@
 const entities = {
-  deliveries: {
+  packages: {
     urls: {
       get: '/packages',
       show: '/packackes/:id',
@@ -36,10 +36,10 @@ const entities = {
       textEdit: 'Edição de entregador',
     },
   },
-  recipient: {
+  recipients: {
     urls: {
-      get: '/recipient',
-      show: '/recipient/:id',
+      get: '/recipients',
+      show: '/recipients/:id',
     },
     columns: [
       { field: 'id', label: 'ID', type: 'text' },

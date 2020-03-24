@@ -45,7 +45,7 @@ export default function DataTable({ entity, actions, searchBar }) {
       setDocs(data.docs);
       setTotalPages(data.pages);
     } catch (error) {
-      toast.error(error.response.data.error || 'Error Interno.');
+      toast.error(error.response.data.error || 'Erro Interno.');
     } finally {
       setLoading(false);
     }
@@ -78,7 +78,7 @@ export default function DataTable({ entity, actions, searchBar }) {
 
   async function handleCancel(id) {
     try {
-      await api.put(`/delivery/${id}/cancel-delivery`);
+      await api.put(`/packages/${id}/cancel-package`);
       toast.success('Cancelado!');
     } catch (error) {
       toast.error(error.response.data.error || 'Error Interno.');

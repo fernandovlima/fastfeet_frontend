@@ -5,10 +5,12 @@ export const Container = styled.label`
   align-items: center;
   cursor: pointer;
   position: relative;
+
   svg {
     position: absolute;
     margin-left: 10px;
   }
+
   input {
     width: 200px;
     padding: 7px 10px 7px 35px;

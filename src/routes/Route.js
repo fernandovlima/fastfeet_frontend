@@ -16,7 +16,7 @@ export default function RouteWrapper({
 
   if (!singed && isPrivate) return <Redirect to="/" />;
 
-  if (singed && !isPrivate) return <Redirect to="/deliveries" />;
+  if (singed && !isPrivate) return <Redirect to="/packages" />;
 
   const Layout = singed ? DefaultLayout : AuthLayout;
 

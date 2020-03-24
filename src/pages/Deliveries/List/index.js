@@ -8,7 +8,7 @@ export default function DeliveryList() {
     <Card>
       <h2>Gerenciando encomendas</h2>
       <DataTable
-        entity="deliveries"
+        entity="packages"
         actions={[
           actionsCrud.VIEW,
           actionsCrud.CREATE,

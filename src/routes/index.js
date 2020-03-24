@@ -15,10 +15,10 @@ export default function Routes() {
     <Switch>
       <Route path="/" exact component={SignIn} />
 
-      <Route path="/deliveries" exact component={DeliveryList} isPrivate />
-      <Route path="/deliveries/new" exact component={DeliveryForm} isPrivate />
+      <Route path="/packages" exact component={DeliveryList} />
+      <Route path="/packages/new" exact component={DeliveryForm} isPrivate />
       <Route
-        path="/deliveries/edit/:id"
+        path="/packages/edit/:id"
         exact
         component={DeliveryForm}
         isPrivate
@@ -39,10 +39,10 @@ export default function Routes() {
         isPrivate
       />
 
-      <Route path="/recipient" exact component={RecipientList} isPrivate />
+      <Route path="/recipients" exact component={RecipientList} isPrivate />
       <Route path="/recipient/new" exact component={RecipientForm} isPrivate />
       <Route
-        path="/recipient/edit/:id"
+        path="/recipients/edit/:id"
         exact
         component={RecipientForm}
         isPrivate
